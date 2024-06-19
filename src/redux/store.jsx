@@ -1,19 +1,10 @@
 import { createStore } from 'redux'
+import reducers from './reducers';
 
-const initialState = 1;
-
-const reducer = (state = 0, action) => {
-  switch (action.type) {
-    case 'INCREMENT':
-      return state + 1
-    case 'DECREMENT':
-      return state - 1
-    default:
-      return state
-  }
-}
+const initialState = {};
 
 // Pass second parameter to set initial state
-export const store = createStore(reducer, initialState)
+export const store = createStore(reducers, initialState)
 
 console.log(store.getState())
+// console.log(reducers);
