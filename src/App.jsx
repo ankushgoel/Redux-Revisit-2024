@@ -9,20 +9,22 @@ function App() {
 
   return (
     <>
-      <h1>Using useState hook</h1>
+    <h1>Counter App</h1>
+    <br />
+      <h3>Using useState hook</h3>
       <div className="card">
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
       </div>
-
-      <h1>Using Redux</h1>
+      <br />
+      <h3>Using Redux</h3>
       <div className="card">
-        <button onClick={(e) => dispatch({type: "INCREMENT"})}>
+        <button onClick={() => dispatch({type: "INCREMENT"})}>
           Increment
         </button>
         <Counter />
-        <button onClick={(e) => dispatch({type: "DECREMENT"})}>
+        <button onClick={() => dispatch({type: "DECREMENT"})}>
           Decrement
         </button>
       </div>
