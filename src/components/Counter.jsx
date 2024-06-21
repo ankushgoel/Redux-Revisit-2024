@@ -1,11 +1,12 @@
-import { useSelector } from "react-redux"
+import { useSelector } from 'react-redux'
 
 const Counter = () => {
-    const count = useSelector((state) => state.count)
-    // console.log(count);
+  // const count = useSelector((state) => state.count)
+  const count = useSelector((state) => state.counter.value)
+  // console.log(count);
   return (
     <div>
-        <h2>{count}</h2>
+      <h2>{count}</h2>
     </div>
   )
 }
